@@ -3,13 +3,14 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  // This MUST match your repository name exactly
-  base: "/ericbrooksmartin.io/", 
-  
+  base: "/ericbrooksmartin.io/",
   plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: "dist",
+  }
 });
